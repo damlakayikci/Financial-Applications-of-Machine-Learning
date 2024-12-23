@@ -7,6 +7,8 @@ inflation_file = './data/inflation_1982_2024.csv'
 gdp_file = './data/GDP_1982_2024.csv'
 m_yield_file = './data/M_yield_1982_2024.csv'
 recession_file = './data/recession_data.csv'
+unemployment_file = './data/unemployment_1982_2024.csv'
+industrial_file = './data/industrial_1982_2024.csv'
 
 
 def process_yield_data(file_path, output_path):
@@ -36,7 +38,7 @@ def process_yield_data(file_path, output_path):
 
     print("Processing complete. Output saved to:", output_path)
 
-def gather_data(inflation_file, gdp_file, m_yield_file, recession_file):
+def gather_data(inflation_file, gdp_file, m_yield_file, recession_file, unemployment_file, industrial_file):
     # Merge all files to a final CSV file
     output_file = './data/processed_data.csv'
     # Read the CSV files
@@ -44,16 +46,22 @@ def gather_data(inflation_file, gdp_file, m_yield_file, recession_file):
     gdp = pd.read_csv(gdp_file, parse_dates=["observation_date"])
     m_yield = pd.read_csv(m_yield_file, parse_dates=["observation_date"])
     recession = pd.read_csv(recession_file, parse_dates=["observation_date"])
+    unemployment = pd.read_csv(unemployment_file, parse_dates=["observation_date"])
+    industrial = pd.read_csv(industrial_file, parse_dates=["observation_date"])
 
     # Merge the dataframes
     merged_data = inflation.merge(gdp, on="observation_date", how="inner")
     merged_data = merged_data.merge(m_yield, on="observation_date", how="inner")
+    merged_data = merged_data.merge(unemployment, on="observation_date", how="inner")
+    merged_data = merged_data.merge(industrial, on="observation_date", how="inner")
+
     merged_data = merged_data.merge(recession, on="observation_date", how="inner")
-    merged_data.columns = ["date", "inflation_rate", "gdp", "yield", "recession"]
+
+    merged_data.columns = ["date", "inflation", "gdp", "yield", "unemployment", "industrial", "recession"]
 
     # Save the merged data to a new CSV file
     merged_data.to_csv(output_file, index=False)
 
 if __name__ == "__main__":
     # process_yield_data(yield_file, './data/processed_yield_data.csv')
-    gather_data(inflation_file, gdp_file, m_yield_file, recession_file)
+    gather_data(inflation_file, gdp_file, m_yield_file, recession_file, unemployment_file, industrial_file)  
