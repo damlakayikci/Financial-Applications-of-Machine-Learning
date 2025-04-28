@@ -1,76 +1,150 @@
-# Financial-Applications-of-Machine-Learning
+# 📈 Financial Applications of Machine Learning
 
+This repository contains a series of projects exploring the applications of machine learning techniques in financial data analysis and investment strategy development. The projects involve predictive modeling, classification, time series forecasting, and portfolio optimization using real-world and simulated financial data.
 
-This repository contains coursework and projects from the Financial Applications of Machine Learning course at Boğaziçi University. Throughout these exercises, the goal is to apply fundamental and advanced machine learning techniques to various financial datasets and problems, covering areas such as prediction, classification, and time series forecasting.
+## Contents
 
-The repository is organized into four main parts:
-	•	Problem Set 1 (ps1)
-	•	Problem Set 2 (ps2)
-	•	Problem Set 3 (ps3)
-	•	Final Project (project)
+- [Problem Set 1 (PS1)](#problem-set-1-ps1)
+- [Problem Set 2 (PS2)](#problem-set-2-ps2)
+- [Problem Set 3 (PS3)](#problem-set-3-ps3)
+- [Final Project](#final-project)
+- [Machine Learning Methods Used](#machine-learning-methods-used)
+- [Libraries Used](#libraries-used)
+- [Running the Code](#running-the-code)
 
-Each part focuses on different machine learning approaches tailored to financial applications.
+---
 
+## Problem Set 1 (PS1)
 
-## Problem Set 1 (ps1)
+**Objective**:  
+Predict stock returns using regression methods and evaluate model performance.
 
-In this problem set, the focus is on applying regression techniques to model relationships between financial variables. The primary objective is to predict financial outcomes, such as asset returns, based on historical data and economic indicators.
+**Techniques**:
+- **Linear Regression**: Basic modeling of returns.
+- **Ridge Regression**: Regularization to prevent overfitting.
+- **Lasso Regression**: Variable selection and regularization.
 
-The methods used in this project include Linear Regression, Ridge Regression, and Lasso Regression. Linear regression is first applied to model simple relationships. Ridge regression is then introduced to handle multicollinearity by applying L2 regularization, while Lasso regression is used to encourage sparsity through L1 regularization.
+**Key Concepts**:
+- Model selection based on predictive accuracy.
+- Bias-variance tradeoff analysis.
 
-Model evaluation metrics such as Root Mean Square Error (RMSE) and R² score are used to compare the models. Feature engineering is also explored to enhance model performance.
+📂 See folder: [`ps1`](./ps1)
 
+---
 
-## Problem Set 2 (ps2)
+## Problem Set 2 (PS2)
 
-In Problem Set 2, the emphasis shifts toward classification problems in finance, particularly tasks like predicting credit risk or detecting fraudulent activities.
+**Objective**:  
+Build classifiers to predict whether a stock's future return will be positive or negative.
 
-The methods used include Logistic Regression, Decision Trees, and Random Forests. Logistic regression is applied to solve binary classification problems, such as predicting loan defaults. Decision trees provide an interpretable way to model financial decision-making, and random forests improve predictive accuracy by combining multiple trees through ensemble learning.
+**Techniques**:
+- **Logistic Regression**: Baseline classification method.
+- **k-Nearest Neighbors (k-NN)**: Non-parametric classification.
+- **Decision Trees**: Simple tree-based modeling.
+- **Random Forests**: Ensemble learning for better generalization.
 
-Model performance is assessed using metrics like accuracy, precision, and recall, highlighting the importance of selecting the right evaluation metric depending on the financial problem at hand.
+**Key Concepts**:
+- Classification accuracy, confusion matrices.
+- Model complexity vs performance.
 
+📂 See folder: [`ps2`](./ps2)
 
-## Problem Set 3 (ps3)
+---
 
-This problem set deals with time series analysis and forecasting in finance, which is crucial for applications such as predicting stock prices or interest rates.
+## Problem Set 3 (PS3)
 
-The primary methods used here are Autoregressive (AR) models and ARIMA models. The project begins with an investigation of stationarity in time series data, applying differencing techniques when necessary. ARIMA models are then built to capture temporal dependencies, with careful model diagnostics performed to ensure adequacy.
+**Objective**:  
+Model and forecast stock return volatility using time series methods.
 
-Through this exercise, key concepts like time series decomposition, trend, and seasonality are also explored, giving hands-on experience in building financial forecasting models.
+**Techniques**:
+- **Autoregressive Models (AR)**
+- **Moving Average Models (MA)**
+- **ARMA / ARIMA Models**: For capturing complex dependencies.
+- **GARCH Models**: For volatility clustering and dynamic variance modeling.
 
+**Key Concepts**:
+- Time series stationarity and differencing.
+- Volatility forecasting.
 
-## Final Project (project)
+📂 See folder: [`ps3`](./ps3)
 
-In the final project, a more comprehensive machine learning pipeline is constructed, applying multiple advanced models to a complex financial dataset.
+---
 
-The methods used include Gradient Boosting Machines (GBM), specifically implementations like XGBoost, along with Support Vector Machines (SVM) and Neural Networks. Gradient boosting is utilized for its strength in handling structured financial data with high predictive power. Support Vector Machines are explored for classification tasks involving high-dimensional datasets. Neural networks are introduced to model complex nonlinear relationships, especially in financial time series data.
+## Final Project
 
-The project involves significant data preprocessing, feature selection, hyperparameter tuning, and thorough performance evaluation. Practical applications include developing predictive models for trading strategies and assessing portfolio risks based on model forecasts.
+**Objective**:  
+Develop a factor-based investment strategy using advanced machine learning techniques and evaluate its performance on real-world data.
 
+**Techniques**:
+- **Linear Regression with Feature Engineering**: Create predictors based on financial factors.
+- **Ensemble Methods (Bagging, Boosting)**: Improve predictive performance.
+- **Sharpe Ratio and Return Metrics**: Evaluate investment profitability and risk-adjusted returns.
 
-Getting Started
+**Key Concepts**:
+- Model interpretability.
+- Backtesting and out-of-sample evaluation.
 
-To run the notebooks in this repository, you can follow these steps:
-1. **Clone the repository:**
-  ```bash
-git clone https://github.com/damlakayikci/Financial-Applications-of-Machine-Learning.git
-  ```
+📂 See folder: [`project`](./project)
 
-2. **Navigate into a subproject folder (e.g., ps1):**
-  ```bash
-cd Financial-Applications-of-Machine-Learning/ps1
-  ```
+---
 
-3. **Install the required dependencies:**
-  ```bash
-pip install -r requirements.txt
-  ```
+## Machine Learning Methods Used
 
-4. **Launch Jupyter Notebook:**
-  ```bash
-jupyter notebook
-  ```
+- **Regression Models**:  
+  Linear Regression, Ridge Regression, Lasso Regression
 
+- **Classification Models**:  
+  Logistic Regression, k-Nearest Neighbors (k-NN), Decision Trees, Random Forests
 
-Each subproject contains its own set of scripts and notebooks demonstrating the application of the relevant machine learning techniques.
+- **Time Series Models**:  
+  AR, MA, ARMA, ARIMA, GARCH
 
+- **Ensemble Methods**:  
+  Bagging, Boosting
+
+- **Evaluation Metrics**:  
+  Mean Squared Error (MSE), Accuracy, Sharpe Ratio, Return Analysis
+
+---
+
+## Libraries Used
+
+- **numpy**
+- **pandas**
+- **matplotlib**
+- **seaborn**
+- **scikit-learn**
+- **statsmodels**
+- **arch** (for GARCH models)
+- **scipy**
+
+---
+
+## Running the Code
+
+Each subproject (`ps1`, `ps2`, `ps3`, `project`) contains its own Python scripts or Jupyter notebooks.  
+To run a project:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/damlakayikci/Financial-Applications-of-Machine-Learning.git
+    cd Financial-Applications-of-Machine-Learning
+    ```
+
+2. Install the necessary packages:
+    ```bash
+    pip install numpy pandas matplotlib seaborn scikit-learn statsmodels arch scipy
+    ```
+
+3. Navigate to the desired subproject folder:
+    ```bash
+    cd ps1
+    python ps1_solution.py
+    ```
+
+> Note: Some subprojects are implemented as Jupyter notebooks (`.ipynb`). You can open them using:
+> ```bash
+> jupyter notebook
+> ```
+
+---
