@@ -11,7 +11,6 @@ The repository is organized into four main parts:
 
 Each part focuses on different machine learning approaches tailored to financial applications.
 
-⸻
 
 ## Problem Set 1 (ps1)
 
@@ -21,7 +20,6 @@ The methods used in this project include Linear Regression, Ridge Regression, an
 
 Model evaluation metrics such as Root Mean Square Error (RMSE) and R² score are used to compare the models. Feature engineering is also explored to enhance model performance.
 
-⸻
 
 ## Problem Set 2 (ps2)
 
@@ -31,7 +29,6 @@ The methods used include Logistic Regression, Decision Trees, and Random Forests
 
 Model performance is assessed using metrics like accuracy, precision, and recall, highlighting the importance of selecting the right evaluation metric depending on the financial problem at hand.
 
-⸻
 
 ## Problem Set 3 (ps3)
 
@@ -41,7 +38,6 @@ The primary methods used here are Autoregressive (AR) models and ARIMA models. T
 
 Through this exercise, key concepts like time series decomposition, trend, and seasonality are also explored, giving hands-on experience in building financial forecasting models.
 
-⸻
 
 ## Final Project (project)
 
@@ -51,30 +47,29 @@ The methods used include Gradient Boosting Machines (GBM), specifically implemen
 
 The project involves significant data preprocessing, feature selection, hyperparameter tuning, and thorough performance evaluation. Practical applications include developing predictive models for trading strategies and assessing portfolio risks based on model forecasts.
 
-⸻
 
 Getting Started
 
 To run the notebooks in this repository, you can follow these steps:
-	1.	Clone the repository:
-
+1. **Clone the repository:**
+  ```bash
 git clone https://github.com/damlakayikci/Financial-Applications-of-Machine-Learning.git
+  ```
 
-
-	2.	Navigate into a subproject folder (e.g., ps1):
-
+2. **Navigate into a subproject folder (e.g., ps1):**
+  ```bash
 cd Financial-Applications-of-Machine-Learning/ps1
+  ```
 
-
-	3.	Install the required dependencies:
-
+3. **Install the required dependencies:**
+  ```bash
 pip install -r requirements.txt
+  ```
 
-
-	4.	Launch Jupyter Notebook:
-
+4. **Launch Jupyter Notebook:**
+  ```bash
 jupyter notebook
-
+  ```
 
 
 Each subproject contains its own set of scripts and notebooks demonstrating the application of the relevant machine learning techniques.
